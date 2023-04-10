@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    background-image: url(images/bg-mobile.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    
+
+}
+
+.main{
+width: 90%;
+max-width: 383px;
+margin: auto;
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+
+.fylo{
+    background-color:hsl(228, 56%, 26%) ;
+    padding: 40px;
+    border-radius: 10px;
+    border-top-right-radius: 100px ;
+    flex: 1;
+   
+   
+}
+
+.fylo_logo{
+    width: fit-content;
+    object-fit: cover;
+    padding-bottom: 30px;
+   
+}
+
+.fylo_folders{
+    display: flex;
+    gap: 25px;
+}
+
+.fylo_folder{
+    box-sizing: content-box;
+    display: block;
+    background-color:hsl(229, 57%, 11%) ;
+    object-fit: contain;
+    width: 25px;
+    height: 25px;
+    padding: 12px;
+    border-radius: 15px;
+   
+   
+}
+
+.storage{
+    color: white;
+    background-color: hsl(228, 56%, 26%) ;
+    padding: 25px;
+    padding-bottom: 60px;
+    position: relative;
+   display: grid;
+   grid-template-columns:  1fr 3fr 1fr;
+   border-radius: 10px;
+   flex: 1;
+}
+
+.storage_texts{
+    grid-column: 1/-1;
+}
+
+
+
+.storage_used{
+    font-size: 1rem;
+    width: 93%;
+    margin: 0 auto;
+    font-weight: 400;
+    color:hsl(243, 100%, 93%) ;
+}
+
+.storage_span{
+    
+    font-weight: bold;
+}
+
+.storage_bar{
+    position: relative;
+    height: 20px;
+    margin: 20px 0 10px 0 ;
+    background-color:hsl(229, 57%, 11%) ;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.storage_linear{
+    position: absolute;
+    margin-left: 3px;
+    width: 80%;
+    height: 70%;
+    background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+    border-radius: 40px;
+
+}
+
+.storage_linear::after{
+    content: "";
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    right: 2.5px;
+    bottom: 2px;
+
+    border-radius: 50%;
+    background-color: white;
+}
+
+.storage_amount{
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    color: hsl(243, 100%, 93%);
+
+}
+
+.storage_rest{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    
+     grid-column: 2/3;
+    background-color: white;
+    color: black;
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding: 13px;
+    border-radius: 10px;
+    bottom: -22%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    
+}
+
+.span2{
+    font-size: 1rem;
+    color:  hsl(229, 7%, 55%);
+    
+}
+
+@media(min-width:768px){
+
+    body{
+        background-color:  hsl(229, 57%, 11%) ;
+        background-image: url(images/bg-desktop.png);
+        background-position: bottom;
+        
+        background-size: 100% 50%;
+       
+    }
+
+    .main{
+        width: 90%;
+        max-width: 1000px;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        
+        gap: 20px;
+        }
+
+        .fylo{
+            background-color:hsl(228, 56%, 26%) ;
+            padding: 40px;
+            border-radius: 10px;
+            border-top-right-radius: 100px ;
+            flex: 1;
+           max-width: 400px;
+           
+        }
+
+        .storage{
+            padding: 35px;
+            padding-bottom: 35px;
+            position: relative;
+           flex: 1;
+           height: max-content;
+           margin-top: auto;
+           flex:2;
+        }
+
+        .storage_rest{
+            position: absolute;
+            
+            top: -50px;
+            left: unset;
+            right: 30px;
+            margin: 0;
+            text-align: center;
+            height: max-content;
+            width: max-content;
+             grid-column: unset;
+            padding-bottom: 30px;
+            border-bottom-right-radius: 0px ;
+            clip-path: polygon(0 83%, 0% 0%, 99% 0%, 100% 100%, 92% 83%);
+
+
+
+        }
+}
+
