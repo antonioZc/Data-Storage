@@ -212,11 +212,19 @@ gap: 20px;
             height: max-content;
             width: max-content;
              grid-column: unset;
-            padding-bottom: 30px;
             border-bottom-right-radius: 0px ;
-            clip-path: polygon(0 83%, 0% 0%, 99% 0%, 100% 100%, 92% 83%);
-
-
+        }
+    
+     .storage_rest::after{
+            content: "";
+            background-color: white;
+            width: 35px;
+            height: 26px;
+            clip-path: polygon(33% 0, 100% 100%, 100% 0);
+            display: block;
+            position: absolute;
+            right: -0.4px;
+            bottom: -25px;
 
         }
 }
